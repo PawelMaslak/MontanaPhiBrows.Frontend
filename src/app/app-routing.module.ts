@@ -6,6 +6,7 @@ import { ContactComponent } from './core/pages/contact/contact.component';
 const routes: Routes = [
   { path: 'welcome', component: WelcomeComponent },
   { path: 'contact', component: ContactComponent },
+  { path: '**', component: WelcomeComponent }
 ];
 
 @NgModule({
