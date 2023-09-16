@@ -7,4 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent {
+  constructor(translateService: TranslateService) {
+    translateService.use(localStorage.getItem('app-locale')!);
+  }
 }

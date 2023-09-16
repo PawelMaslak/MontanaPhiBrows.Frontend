@@ -13,21 +13,21 @@ export class NavbarDesktopComponent {
   public languages: LocaleLookupItem[];
   public selectedLanguage: string;
   public selectedLanguageId: string;
+  public localStorage: Storage;
 
   constructor(
     private readonly localisationService: LocalisationService
   ) {
     this.languages = this.localisationService.locales;
-    this.selectedLanguage = this.localisationService.getLocaleFullName();
+    this.selectedLanguage = this.localisationService.localeFullName;
     this.selectedLanguageId = this.localisationService.locale;
-
-    console.log(this.languages);
-    console.log(this.selectedLanguage);
-    console.log(this.selectedLanguageId);
+    this.localStorage = localStorage;
   }
 
+  //It reloads the website before changing selected language value.
   public languageSelected(value: string): void {
     this.localisationService.changeLocale(value);
-    this.selectedLanguage = this.localisationService.getLocaleFullName();
+    this.selectedLanguage = this.localisationService.localeFullName;
+    this.selectedLanguageId = this.localisationService.locale;
   }
 }
