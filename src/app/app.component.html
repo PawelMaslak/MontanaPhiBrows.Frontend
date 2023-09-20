@@ -1,6 +1,35 @@
-<h1>Router Example</h1>
-<nav>
-  <a routerLink="/welcome" routerLinkActive="active" ariaCurrentWhenActive="page">Welcome</a>
-  <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="navigation">
+    <app-navbar></app-navbar>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1 d-none d-sm-block">
+            margin placeholder
+        </div>
+        <div class="col">
+            <app-welcome></app-welcome>
+            <app-story></app-story>
+            <app-services></app-services>
+            <app-reviews></app-reviews>
+            <app-contact></app-contact>
+        </div>
+        <div class="col-1 d-none d-sm-block">
+            margin placeholder
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+Footer
+</div>
+
+<!-- <div class="row">
+    <div>
+        <h2>{{ 'COMMON.WELCOME_MESSAGE' | translate }}</h2>
+        <label>
+          {{ 'COMMON.WELCOME_MESSAGE' | translate }}
+          <select #langSelect (change)="translate.use(langSelect.value)">
+            <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+          </select>
+        </label>
+      </div>
+</div> -->

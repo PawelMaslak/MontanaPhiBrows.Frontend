@@ -1,0 +1,15 @@
+@import "./global";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: $colorA;
+    background-color: $colourA;
+    font-family: $fontNormal;
+
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+}
