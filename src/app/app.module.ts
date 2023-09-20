@@ -16,7 +16,6 @@ import { ReviewsComponent } from './core/pages/reviews/reviews.component';
 import { NavbarMobileComponent } from './core/pages/navbar/navbar-mobile/navbar-mobile.component';
 import { NavbarDesktopComponent } from './core/pages/navbar/navbar-desktop/navbar-desktop.component';
 import { FooterComponent } from './core/pages/footer/footer.component';
-import { LocalStorageService } from './core/services/local-storage.service';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
