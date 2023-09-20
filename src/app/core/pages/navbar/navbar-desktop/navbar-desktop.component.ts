@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LocalStorageService } from 'src/app/core/services/local-storage.service';
 import { LocalisationService } from 'src/app/core/services/localisation.service';
 import { LocaleLookupItem } from 'src/app/core/shared/lookup-item';
 
