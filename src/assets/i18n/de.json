@@ -1,5 +1,6 @@
 {
     "COMMON": {
-        "WELCOME_MESSAGE": "Siema kurwy"
+        "WELCOME_MESSAGE": "Siema kurwy",
+        "SELECT_LANGUAGE": "Sprache wahlen"
     }
 }
