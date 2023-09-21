@@ -18,11 +18,15 @@
                 <a class="nav-link" aria-current="page" href="#">Nav4</a>
             </li>
         </ul>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                {{ 'COMMON.SELECT_LANGUAGE' | translate}}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('en')">English</a></li>
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('de')">Deutsch</a></li>
+            </ul>
+        </div>
     </div>
-    <!-- <button class="btn btn-primary" (click)="languageSelected('en')">
-        ENG
-    </button>
-    <button class="btn btn-primary" (click)="languageSelected('de')">
-        CH
-    </button> -->
 </nav>
