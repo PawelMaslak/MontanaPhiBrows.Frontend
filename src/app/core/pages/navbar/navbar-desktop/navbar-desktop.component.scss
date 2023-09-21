@@ -1,7 +1,54 @@
 @import '../../../../../assets/styles/global';
 
 .navbar {
-    background-color: $colourB;
-    height: $navHeight;
     padding: 0;
+    background-color: red;
+
+    .navbar-nav {
+        flex-direction: row;
+
+        .nav-item {
+            font-size: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 500ms;
+
+            .nav-link {
+                padding-inline: 2rem;
+            }
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 110%;
+            background-color: yellow;
+            scale: 0 1;
+            transition:
+                scale 250ms,
+                translate 300ms;
+        }
+
+        .nav-item:hover:after {
+            scale: 1 1;
+        }
+
+        .nav-item:hover+.nav-item::after {
+            translate: -100%;
+            transition-delay: 250ms;
+        }
+
+        .nav-item:has(+ :hover)::after {
+            translate: 100%;
+            transition-delay: 250ms;
+        }
+
+        .nav-item:hover {
+            background-color: rgb(202, 73, 73);
+        }
+
+    }
 }
