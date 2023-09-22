@@ -14,12 +14,21 @@ export class LocalisationService {
 
   constructor(private readonly translateService: TranslateService) {
     this.locale = this.getLocale();
+    this.verifyLocalStorage();
     this.localeFullName = this.getLocaleFullName();
   }
 
   public getLocale(): string {
     const locale = localStorage.getItem(this.localeStorageKey);
     return locale != null ? locale : 'en';
+  }
+
+  public verifyLocalStorage() {
+    const localStorageValue = localStorage.getItem(this.localeStorageKey);
+
+    if(localStorageValue == null) {
+      this.setLocale(this.locale);
+    }
   }
 
   //Something wrong with this function.
