@@ -1,6 +1,7 @@
 {
     "COMMON": {
         "WELCOME_MESSAGE": "Hey you guys!",
-        "SELECT_LANGUAGE": "Select language"
+        "SELECT_LANGUAGE": "Select language",
+        "LANGUAGE": "EN"
     }
 }
