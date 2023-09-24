@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+
+    .dir-column {
+        flex-direction: column;
+    }
+}
+
+.header {
+    margin-bottom: 20vh;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 25px;
+}
+
+.main-image {
+    width: 500px;
+    border-radius: 10px;
+}

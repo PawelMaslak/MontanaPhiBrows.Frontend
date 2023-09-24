@@ -3,5 +3,13 @@
         "WELCOME_MESSAGE": "Hey you guys!",
         "SELECT_LANGUAGE": "Select language",
         "LANGUAGE": "EN"
+    },
+    "CONTACT": {
+        "HEADER": "CONTACT & MEDIA",
+        "TELEPHONE": "Telephone",
+        "SOCIAL_MEDIA": "Social Media"
+    },
+    "FOOTER": {
+        "SIGNATURE": "Designed and built by PM Software ©"
     }
 }

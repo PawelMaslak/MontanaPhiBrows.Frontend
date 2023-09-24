@@ -17,6 +17,16 @@ import { NavbarMobileComponent } from './core/pages/navbar/navbar-mobile/navbar-
 import { NavbarDesktopComponent } from './core/pages/navbar/navbar-desktop/navbar-desktop.component';
 import { FooterComponent } from './core/pages/footer/footer.component';
 
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import {
+  faInstagram,
+  faGoogle,
+} from '@fortawesome/free-brands-svg-icons';
+
+import {
+  faMap
+} from '@fortawesome/free-solid-svg-icons';
+
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
@@ -33,9 +43,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ReviewsComponent,
     NavbarMobileComponent,
     NavbarDesktopComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({
@@ -49,4 +61,12 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(
+      faInstagram,
+      faGoogle,
+      faMap
+    );
+ }
+}

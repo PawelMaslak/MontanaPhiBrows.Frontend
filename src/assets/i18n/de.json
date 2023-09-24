@@ -3,5 +3,13 @@
         "WELCOME_MESSAGE": "Siema kurwy",
         "SELECT_LANGUAGE": "Sprache wahlen",
         "LANGUAGE": "DE"
+    },
+    "CONTACT": {
+        "HEADER": "KONTAKT & SOZIAL MEDIEN",
+        "TELEPHONE": "Telefon",
+        "SOCIAL_MEDIA": "Sozial Median"
+    },
+    "FOOTER": {
+        "SIGNATURE": "Hergestellt in DDR ©"
     }
 }
