@@ -1,25 +1,21 @@
-.container {
-    display: flex;
-
-    .dir-column {
+.top {
+    .container {
+        display: flex;
         flex-direction: column;
-    }
+        min-height: 20vh;
+      }
+      
+      .child {
+        flex-grow: 1;
+      }
 }
 
-.header {
-    margin-bottom: 20vh;
+.bottom {
+    min-height: 60vh;
+    margin-top: 10vh;
 }
 
-h1 {
-    font-weight: bold;
-}
-
-.logo {
-    width: 200px;
-    margin-bottom: 25px;
-}
-
-.main-image {
-    width: 500px;
-    border-radius: 10px;
+.contact {
+    display: flex;
+    flex-direction: column;
 }
