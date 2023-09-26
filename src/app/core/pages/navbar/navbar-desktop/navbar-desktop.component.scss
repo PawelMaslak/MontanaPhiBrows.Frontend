@@ -97,6 +97,7 @@ $navFont: black;
             .dropdown-item {
                 background-color: $navHoverLine;
                 transition: all 200ms;
+                text-transform: uppercase;
             }
 
             .dropdown-item:hover {

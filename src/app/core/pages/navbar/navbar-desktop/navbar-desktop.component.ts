@@ -10,6 +10,7 @@ import { LocaleLookupItem } from 'src/app/core/shared/lookup-item';
 })
 export class NavbarDesktopComponent {
   public languages: LocaleLookupItem[];
+  public availableLanguages: LocaleLookupItem[];
   public selectedLanguage: string;
   public selectedLanguageId: string;
   public localStorage: Storage;
@@ -21,6 +22,7 @@ export class NavbarDesktopComponent {
     this.selectedLanguage = this.localisationService.localeFullName;
     this.selectedLanguageId = this.localisationService.locale;
     this.localStorage = localStorage;
+    this.availableLanguages = this.getDropdownListItems();
   }
 
   //It reloads the website before changing selected language value.
@@ -28,5 +30,9 @@ export class NavbarDesktopComponent {
     this.localisationService.changeLocale(value);
     this.selectedLanguage = this.localisationService.localeFullName;
     this.selectedLanguageId = this.localisationService.locale;
+  }
+
+  private getDropdownListItems(): LocaleLookupItem[] {
+    return this.languages.filter(language => language.value != this.selectedLanguageId);
   }
 }
