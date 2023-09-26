@@ -12,6 +12,7 @@ export class NavbarMobileComponent {
   public languages: LocaleLookupItem[];
   public selectedLanguage: string;
   public selectedLanguageId: string;
+  public availableLanguages: LocaleLookupItem[];
   public localStorage: Storage;
 
   constructor(
@@ -21,6 +22,7 @@ export class NavbarMobileComponent {
     this.selectedLanguage = this.localisationService.localeFullName;
     this.selectedLanguageId = this.localisationService.locale;
     this.localStorage = localStorage;
+    this.availableLanguages = this.getDropdownListItems();
   }
 
   //It reloads the website before changing selected language value.
@@ -30,6 +32,9 @@ export class NavbarMobileComponent {
     this.selectedLanguageId = this.localisationService.locale;
   }
 
+  private getDropdownListItems(): LocaleLookupItem[] {
+    return this.languages.filter(language => language.value != this.selectedLanguageId);
+  }
 
   // Menu
   isMenuOpen = false;
