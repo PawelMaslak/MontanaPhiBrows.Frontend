@@ -1,0 +1,170 @@
+@import '../../../../../assets/styles/global';
+
+$navHoverBg: $colourA;
+$navHoverLine: $colourB;
+$navBg: white;
+$navFont: black;
+
+.navbar {
+    padding: 0;
+    background-color: $navBg;
+    color: $navFont;
+    position: relative;
+    width: 100%;
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        cursor: pointer;
+
+        span {
+            background: $navHoverLine;
+            border-radius: 10px;
+            height: 4px;
+            margin: 4px 0;
+            transition: 300ms cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+
+        span:nth-of-type(1) {
+            width: 50%;
+        }
+
+        span:nth-of-type(2) {
+            width: 100%;
+        }
+
+        span:nth-of-type(3) {
+            width: 75%;
+        }
+    }
+
+    .hamburger-menu.is-open {
+        span:nth-of-type(1) {
+            transform-origin: bottom;
+            transform: rotatez(45deg) translate(4px, 0px)
+        }
+
+        span:nth-of-type(2) {
+
+            transform-origin: top;
+            transform: rotateZ(-45deg)
+        }
+
+        span:nth-of-type(3) {
+
+            transform-origin: bottom;
+            width: 50%;
+            transform: translate(18px, -6px) rotateZ(45deg);
+        }
+    }
+
+    .navbar-nav.is-open {
+        transform: scaleY(1);
+    }
+
+    .navbar-nav {
+        padding: 2rem 0;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 200ms;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: $navBg;
+        border-top: 5px solid $navHoverLine;
+
+        // Navbar items
+        .nav-item {
+            width: 100%;
+
+            .nav-link {
+                padding: 1rem 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+            .nav-link:hover{
+                background-color: $navHoverBg;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 5px;
+                width: 100%;
+                background-color: $navHoverLine;
+                scale: 0 1;
+                transition:
+                    scale 250ms,
+                    translate 300ms;
+            }
+    
+            .nav-link:hover:after {
+                scale: 1 1;
+            }
+        }
+    }
+
+    // Navbar dropdow for language select
+    .dropdown {
+        margin-left: 1rem;
+        transition: background-color 500ms;
+
+        .dropdown-toggle {
+            padding: 8px 16px;
+        }
+
+        .dropdown-toggle.show {
+            background-color: $navHoverLine;
+        }
+
+        .dropdown-toggle::after {
+            transform: rotate(0);
+            transition: transform 200ms;
+        }
+
+        .dropdown-toggle.show::after {
+            transform: rotate(180deg);
+            transition: transform 200ms;
+        }
+
+        .dropdown-menu {
+            display: inherit;
+            min-width: 100%;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 200ms;
+            background-color: $navHoverLine;
+
+            .dropdown-item {
+                background-color: $navHoverLine;
+                transition: all 200ms;
+            }
+
+            .dropdown-item:hover {
+                background-color: $navBg;
+            }
+        }
+
+        .dropdown-menu.show {
+            display: inherit;
+            top: 90%;
+            transform: scaleY(1);
+        }
+    }
+
+    .dropdown:hover {
+        cursor: pointer;
+        background-color: $navHoverLine;
+    }
+}
