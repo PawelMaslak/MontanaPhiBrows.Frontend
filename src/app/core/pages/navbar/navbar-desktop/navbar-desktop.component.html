@@ -19,13 +19,13 @@
             </li>
         </ul>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            <div class="dropdown-toggle" id="dropdownLanguage"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 {{ 'COMMON.LANGUAGE' | translate}}
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#" (click)="languageSelected('en')">English</a></li>
-                <li><a class="dropdown-item" href="#" (click)="languageSelected('de')">Deutsch</a></li>
+        </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('en')">EN</a></li>
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('de')">DE</a></li>
             </ul>
         </div>
     </div>

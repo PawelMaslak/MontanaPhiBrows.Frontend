@@ -1,1 +1,36 @@
-<p>navbar-mobile works!</p>
+<nav class="navbar" #nav>
+    <div class="container">
+        <a class="navbar-brand me-auto" href="#">
+            LOGO
+            <!-- wpierdolić tu logo -->
+        </a>
+        <div class="hamburger-menu" [class.is-open]="isMenuOpen" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ 'COMMON.LANGUAGE' | translate}}
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="dropdownLanguage">
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('en')">EN</a></li>
+                <li><a class="dropdown-item" href="#" (click)="languageSelected('de')">DE</a></li>
+            </ul>
+        </div>
+        <ul class="navbar-nav" [class.is-open]="isMenuOpen">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Nav1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Nav2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Nav3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Nav4</a>
+            </li>
+        </ul>
+    </div>
+</nav>
