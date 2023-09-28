@@ -3,82 +3,18 @@
 // Te zmienne potem do globala jak beda odpowiednie kolory 
 
 $bg: $colourA;
-$fontColor :#694b33;
 
 .welcome {
     background-color: $bg;
     padding: 2rem 0;
 
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .logo,
+    .photo {
+        width: 100%;
+    }
 
-        .welcome-left {
-            flex: 1;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            .logo {
-                flex: 2;
-                padding-right: 2rem;
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .text {
-                flex: 5;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-            }
-
-            @media (min-width: 768px) {
-                flex-direction: column;
-                align-items: flex-start;
-
-                .logo {
-                    padding-right: 0;
-                    width: 50%;
-                }
-
-                .text {
-                    h1 {
-                        padding-top: 2rem;
-                    }
-
-                    p {
-                        padding-top: 2rem;
-                    }
-                }
-
-            }
-
-        }
-
-        .welcome-right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                width: 100%;
-                border-bottom-left-radius: 50%;
-                border-bottom-right-radius: 50%;
-            }
-        }
-
-        @media (min-width: 768px) {
-            flex-direction: row;
-        }
-
+    .photo {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
     }
 }
