@@ -1,21 +1,21 @@
-.top {
-    .container {
-        display: flex;
-        flex-direction: column;
-        min-height: 20vh;
-      }
-      
-      .child {
-        flex-grow: 1;
-      }
-}
+@import '../../../../assets/styles/global';
 
-.bottom {
-    min-height: 60vh;
-    margin-top: 10vh;
-}
+$bg: $colourA;
 
 .contact {
-    display: flex;
-    flex-direction: column;
+    background-color: $bg;
+    padding: 2rem 0;
+
+    .logo,
+    .photo {
+        width: 100%;
+    }
+
+    .photo {
+        border-radius: 5%;
+    }
+
+    .title {
+    text-align: right;
+    }
 }
