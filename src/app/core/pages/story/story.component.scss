@@ -1,1 +1,21 @@
 @import '../../../../assets/styles/global';
+
+$bg: $colourA;
+
+.story {
+    background-color: $bg;
+    padding: 2rem 0;
+    
+    .logo,
+    .photo {
+        width: 100%;
+    }
+
+    .photo {
+        border-radius: 5%;
+    }
+
+    .title {
+    text-align: right;
+    }
+}

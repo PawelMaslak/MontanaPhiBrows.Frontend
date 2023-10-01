@@ -1,0 +1,46 @@
+@import '../../../../assets/styles/global';
+
+$bg: $colourA;
+
+.reviews {
+    background-color: $bg;
+    padding: 2rem 0;
+
+    .logo,
+    .photo {
+        width: 100%;
+    }
+
+    .photo {
+        border-radius: 5%;
+    }
+
+    .title {
+        text-align: right;
+    }
+
+    .row {
+        margin: 0;
+
+        div {
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .review {
+        width: 100%;
+
+        .review-text {
+            font-weight: 600;
+            font-family: $fontNormal;
+            font-style: italic;
+            text-align: justify
+        }
+
+        .signature {
+            text-align: right;
+            margin-right: 1.5rem;
+        }
+    }
+}

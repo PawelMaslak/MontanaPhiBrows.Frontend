@@ -4,6 +4,12 @@
         "SELECT_LANGUAGE": "Select language",
         "LANGUAGE": "EN"
     },
+    "STORY": {
+        "HEADER": "OUR STORY"
+    },
+    "REVIEWS": {
+        "HEADER": "What Our Clients Say"
+    },
     "CONTACT": {
         "HEADER": "CONTACT & MEDIA",
         "TELEPHONE": "Telephone",

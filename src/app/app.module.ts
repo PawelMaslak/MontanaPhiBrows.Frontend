@@ -21,6 +21,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import {
   faInstagram,
   faGoogle,
+  faFacebook
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
@@ -66,7 +67,8 @@ export class AppModule {
     library.addIcons(
       faInstagram,
       faGoogle,
-      faMap
+      faMap,
+      faFacebook
     );
  }
 }
