@@ -18,3 +18,67 @@ $bg: $colourA;
         border-bottom-right-radius: 50%;
     }
 }
+
+.gallery {
+    .slider {
+        scrollbar-width: none;
+        position: relative;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .images {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            overflow-x: auto;
+
+            img {
+                width: 250px;
+            }
+        }
+
+        .slider-control{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #prev-slide{
+            left: -50px;
+        }
+        #next-slide{
+            right: -50px;
+        }
+    }
+
+    .slider-scroll {
+        height: 20px;
+        width: 100%;
+        background-color: red;
+        display: flex;
+        align-items: center;
+
+
+        .track {
+            position: relative;
+            height: 5px;
+            width: 100%;
+            background-color: blue;
+
+            .thumb{
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                background-color: yellow;
+            }
+        }
+    }
+}
