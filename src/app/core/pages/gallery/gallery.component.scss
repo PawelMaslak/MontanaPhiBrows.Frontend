@@ -1,24 +1,3 @@
-@import '../../../../assets/styles/global';
-
-// Te zmienne potem do globala jak beda odpowiednie kolory 
-
-$bg: $colourA;
-
-.welcome {
-    background-color: $bg;
-    padding: 2rem 0;
-
-    .logo,
-    .photo {
-        width: 100%;
-    }
-
-    .photo {
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-    }
-}
-
 .gallery {
     .slider {
         scrollbar-width: none;
