@@ -10,6 +10,17 @@ $navFont: black;
     background-color: $navBg;
     color: $navFont;
 
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+
     .navbar-nav {
         flex-direction: row;
 
