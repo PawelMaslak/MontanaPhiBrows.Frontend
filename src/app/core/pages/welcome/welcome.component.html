@@ -28,8 +28,12 @@
 <section class="gallery">
     <div class="container">
         <div class="slider">
-            <div id="prev-slide" class="slider-control">prev</div>
-            <div id="next-slide" class="slider-control">next</div>
+            <div id="prev-slide" class="slider-control d-none d-lg-flex">
+                <fa-icon [icon]="['fas', 'arrow-left']"></fa-icon>
+            </div>
+            <div id="next-slide" class="slider-control d-none d-lg-flex">
+                <fa-icon [icon]="['fas', 'arrow-right']"></fa-icon>
+            </div>
             <div class="images">
                 <img src="../../../../assets/images/carousel/1.jpg" alt="">
                 <img src="../../../../assets/images/carousel/2.jpg" alt="">
@@ -48,5 +52,4 @@
             </div>
         </div>
     </div>
-    gallery
 </section>

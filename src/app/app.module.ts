@@ -24,7 +24,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faMap
+  faMap,
+  faArrowRight,
+  faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -66,7 +68,9 @@ export class AppModule {
     library.addIcons(
       faInstagram,
       faGoogle,
-      faMap
+      faMap,
+      faArrowRight,
+      faArrowLeft
     );
  }
 }
