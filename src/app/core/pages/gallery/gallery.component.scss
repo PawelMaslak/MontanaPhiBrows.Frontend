@@ -1,4 +1,9 @@
+@import '../../../../assets/styles/global';
+
 .gallery {
+    background-color: $colourB;
+    padding: 2rem 0;
+
     .slider {
         scrollbar-width: none;
         position: relative;
@@ -14,49 +19,69 @@
             overflow-x: auto;
 
             img {
-                width: 250px;
+                height: 40vh;
+                border-radius: 25px;
+            }
+
+            @media (max-width: 768px) {
+                img {
+                    height: auto;
+                    width: 100%;
+                }
             }
         }
 
-        .slider-control{
+        .slider-control {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            height: 50px;
-            width: 50px;
-            background-color: black;
+            height: 40px;
+            width: 40px;
+            background-color: $colourA;
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0.5;
+            border-radius: 50%;
+            transition: opacity 200ms;
+            cursor: pointer;
         }
 
-        #prev-slide{
-            left: -50px;
+        .slider-control:hover {
+            opacity: 1;
         }
-        #next-slide{
-            right: -50px;
+
+        #prev-slide {
+            left: -20px;
+        }
+
+        #next-slide {
+            right: -20px;
         }
     }
 
     .slider-scroll {
-        height: 20px;
+        padding-top: 1rem;
+        height: 10px;
         width: 100%;
-        background-color: red;
         display: flex;
         align-items: center;
 
 
         .track {
             position: relative;
-            height: 5px;
+            height: 7px;
             width: 100%;
-            background-color: blue;
+            background-color: $colourA;
+            border-radius: 10px;
 
-            .thumb{
+            .thumb {
                 position: absolute;
                 height: 100%;
-                width: 50%;
-                background-color: yellow;
+                width: 30%;
+                background-color: $fontColor;
+                border-radius: inherit;
+                cursor: grab;
             }
         }
     }
