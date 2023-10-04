@@ -1,12 +1,9 @@
 @import '../../../../assets/styles/global';
 
-// Te zmienne potem do globala jak beda odpowiednie kolory 
-
-$bg: $colourA;
-
 .welcome {
-    background-color: $bg;
+    background-color: $colourA;
     padding: 2rem 0;
+    margin-top: 40px;
 
     .logo,
     .photo {

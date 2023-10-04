@@ -1,0 +1,87 @@
+@import '../../../../assets/styles/global';
+
+// NAV Variables
+
+$navHoverBg: $colourA;
+$navHoverLine: $colourB;
+$navBg: white;
+$navFont: black;
+
+.navbar {
+    padding: 0;
+    background-color: $navBg;
+    color: $navFont;
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    // Navbar dropdow for language select
+    .dropdown {
+        margin-left: 2rem;
+        transition: background-color 500ms;
+
+        .dropdown-toggle {
+            padding: 8px 16px;
+        }
+
+        .dropdown-toggle.show {
+            background-color: $navHoverLine;
+        }
+
+        .dropdown-toggle::after {
+            transform: rotate(0);
+            transition: transform 200ms;
+        }
+
+        .dropdown-toggle.show::after {
+            transform: rotate(180deg);
+            transition: transform 200ms;
+        }
+
+        .dropdown-menu {
+            display: inherit;
+            min-width: 100%;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 200ms;
+            background-color: $navHoverLine;
+
+            .dropdown-item {
+                background-color: $navHoverLine;
+                transition: all 200ms;
+                text-transform: uppercase;
+            }
+
+            .dropdown-item:hover {
+                background-color: $navBg;
+            }
+        }
+
+        .dropdown-menu.show {
+            display: inherit;
+            top: 90%;
+            transform: scaleY(1);
+        }
+    }
+
+
+
+
+    .dropdown:hover {
+        cursor: pointer;
+        background-color: $navHoverLine;
+    }
+
+}
