@@ -9,6 +9,7 @@ $navFont: black;
 
 .navbar {
     padding: 0;
+    height: 4rem;
     background-color: $navBg;
     color: $navFont;
 
@@ -16,7 +17,7 @@ $navFont: black;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
+        height: 100%;
 
         img {
             height: 100%;
@@ -27,8 +28,12 @@ $navFont: black;
     .dropdown {
         margin-left: 2rem;
         transition: background-color 500ms;
+        height: 100%;
 
         .dropdown-toggle {
+            height: 100%;
+            display: flex;
+            align-items: center;
             padding: 8px 16px;
         }
 
@@ -71,13 +76,9 @@ $navFont: black;
 
         .dropdown-menu.show {
             display: inherit;
-            top: 90%;
             transform: scaleY(1);
         }
     }
-
-
-
 
     .dropdown:hover {
         cursor: pointer;
