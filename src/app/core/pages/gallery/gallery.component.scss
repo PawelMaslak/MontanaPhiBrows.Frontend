@@ -1,88 +1,151 @@
 @import '../../../../assets/styles/global';
 
-.gallery {
+// .gallery {
+//     background-color: $colourB;
+//     padding: 2rem 0;
+
+//     .slider {
+//         scrollbar-width: none;
+//         position: relative;
+
+//         ::-webkit-scrollbar {
+//             display: none;
+//         }
+
+//         .images {
+//             display: flex;
+//             flex-direction: row;
+//             gap: 2rem;
+//             overflow-x: auto;
+
+//             img {
+//                 height: 40vh;
+//                 border-radius: 25px;
+//             }
+
+//             @media (max-width: 768px) {
+//                 img {
+//                     height: auto;
+//                     width: 100%;
+//                 }
+//             }
+//         }
+
+//         .slider-control {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             height: 40px;
+//             width: 40px;
+//             background-color: $colourA;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             opacity: 0.5;
+//             border-radius: 50%;
+//             transition: opacity 200ms;
+//             cursor: pointer;
+//         }
+
+//         .slider-control:hover {
+//             opacity: 1;
+//         }
+
+//         #prev-slide {
+//             left: -20px;
+//         }
+
+//         #next-slide {
+//             right: -20px;
+//         }
+//     }
+
+//     .slider-scroll {
+//         padding-top: 1rem;
+//         height: 10px;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+
+
+//         .track {
+//             position: relative;
+//             height: 7px;
+//             width: 100%;
+//             background-color: $colourA;
+//             border-radius: 10px;
+
+//             .thumb {
+//                 position: absolute;
+//                 height: 100%;
+//                 width: 30%;
+//                 background-color: $fontColor;
+//                 border-radius: inherit;
+//                 cursor: grab;
+//             }
+//         }
+//     }
+// }
+
+.galleryv2 {
     background-color: $colourB;
     padding: 2rem 0;
 
     .slider {
-        scrollbar-width: none;
-        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        user-select: none;
 
-        ::-webkit-scrollbar {
-            display: none;
+        img {
+            height: auto;
+            width: calc((100% / 3) - (4rem / 3));
+            margin-left: 2rem;
+            border-radius: 25px;
         }
 
-        .images {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-            overflow-x: auto;
+        img:first-child {
+            margin-left: 0 !important;
+        }
 
+        @media (max-width: 991.98px) {
             img {
-                height: 40vh;
-                border-radius: 25px;
-            }
-
-            @media (max-width: 768px) {
-                img {
-                    height: auto;
-                    width: 100%;
-                }
+                width: calc((100% / 2) - 1rem);
             }
         }
 
-        .slider-control {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 40px;
-            width: 40px;
-            background-color: $colourA;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0.5;
-            border-radius: 50%;
-            transition: opacity 200ms;
-            cursor: pointer;
-        }
-
-        .slider-control:hover {
-            opacity: 1;
-        }
-
-        #prev-slide {
-            left: -20px;
-        }
-
-        #next-slide {
-            right: -20px;
+        @media (max-width: 767.98px) {
+            img {
+                width: 100%;
+                margin-left: 0;
+            }
         }
     }
 
-    .slider-scroll {
-        padding-top: 1rem;
-        height: 10px;
-        width: 100%;
+    .slider-control {
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $colourA;
+        opacity: 0.5;
+        transition: opacity 200ms;
+        cursor: pointer;
+    }
 
+    .slider-control:hover {
+        opacity: 1;
+    }
 
-        .track {
-            position: relative;
-            height: 7px;
-            width: 100%;
-            background-color: $colourA;
-            border-radius: 10px;
+    #prev-slide {
+        left: calc(.75rem - 20px);
+    }
 
-            .thumb {
-                position: absolute;
-                height: 100%;
-                width: 30%;
-                background-color: $fontColor;
-                border-radius: inherit;
-                cursor: grab;
-            }
-        }
+    #next-slide {
+        right: calc(.75rem - 20px);
     }
 }
