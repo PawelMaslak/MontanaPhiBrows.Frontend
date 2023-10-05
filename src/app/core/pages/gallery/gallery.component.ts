@@ -7,65 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
   ngOnInit() {
-    // //gallery v1
-    // const images = document.querySelector('.images');
-    // const sliderControls = document.querySelectorAll(".slider-control");
-    // const sliderScroll = document.querySelector('.slider-scroll');
-    // const sliderThumb = sliderScroll?.querySelector('.thumb') as HTMLElement;
-    // // const maxScrollLeft = images?.scrollWidth! - images?.clientWidth!;
-
-    // // console.log(images?.scrollWidth!);
-
-    // images?.addEventListener('scroll', () => {
-    //   updateScroll();
-    // })
-
-    // sliderThumb.addEventListener('mousedown', (e) => {
-    //   const x = e.clientX
-    //   const position = sliderThumb.offsetLeft;
-    //   const maxScrollLeft = images?.scrollWidth! - images?.clientWidth!;
-
-    //   const handleMouseMove = (e: any) => {
-    //     const dx = e.clientX - x;
-    //     const newPosition = position + dx;
-    //     const maxPosition = sliderScroll?.getBoundingClientRect().width! - sliderThumb.offsetWidth;
-    //     const boundedPosition = Math.max(0, Math.min(maxPosition, newPosition));
-    //     const scrollPosition = (boundedPosition / maxPosition) * maxScrollLeft;
-    //     sliderThumb.style.left = `${boundedPosition}px`;
-    //     images!.scrollLeft = scrollPosition;
-    //   }
-
-    //   const handleMouseUp = () => {
-    //     document.removeEventListener('mousemove', handleMouseMove);
-    //     document.removeEventListener('mouseup', handleMouseUp);
-    //   }
-
-    //   document.addEventListener('mousemove', handleMouseMove);
-    //   document.addEventListener('mouseup', handleMouseUp);
-    // })
-
-
-    // //SLIDE ON CLICK
-    // sliderControls.forEach(el => {
-    //   el.addEventListener('click', () => {
-    //     const move = el.id === 'prev-slide' ? -1 : 1;
-    //     const moveSize = images!.clientWidth * move;
-    //     images?.scrollBy({ left: moveSize, behavior: "smooth" })
-    //   })
-    // })
-
-    // const updateScroll = () => {
-    //   const maxScrollLeft = images?.scrollWidth! - images?.clientWidth!;
-    //   const scrollPosition = images?.scrollLeft;
-    //   const thumbPossition = (scrollPosition! / maxScrollLeft) * (sliderScroll?.clientWidth! - sliderThumb?.offsetWidth);
-    //   sliderThumb.style.left = `${thumbPossition}px`
-    // }
-
-
-
-
-    // galleryv2
-
     const slider = document.querySelector('.slider');
     const sliderControls = document.querySelectorAll(".slider-control");
     const image = document.querySelectorAll(".slider img")[0];
@@ -82,5 +23,47 @@ export class GalleryComponent implements OnInit {
     window.addEventListener("resize", () => {
       slider?.scrollTo({ left: 0, behavior: "smooth" })
     });
+
+    //Drag, touches
+
+    let isDragStart = false, isDragging = false, prevPageX: any, prevScrollLeft: any, positionDiff;
+
+    const dragStart = (e: any) => {
+      isDragStart = true;
+      prevPageX = e.pageX || e.touches[0].pageX;
+      prevScrollLeft = slider?.scrollLeft;
+    }
+
+    const dragStop = (e: any) => {
+      isDragStart = false;
+      if (!isDragging) return;
+      isDragging = false;
+      positionDiff = Math.abs(positionDiff!);
+      let imageWidth = image.clientWidth + 32; // 32px = 2rem margin
+      let valDifference = imageWidth - positionDiff;
+      if(slider?.scrollLeft! > prevScrollLeft){
+        slider?.scrollBy({ left: valDifference, behavior: "smooth" })
+      }
+      if(slider?.scrollLeft! < prevScrollLeft){
+        slider?.scrollBy({ left: -valDifference, behavior: "smooth" })
+      }
+    }
+
+    const dragging = (e: any) => {
+      if (!isDragStart) return;
+      e.preventDefault();
+      isDragging = true;
+      positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+      slider!.scrollLeft = prevScrollLeft - positionDiff;
+    }
+
+    slider?.addEventListener("mousedown", dragStart);
+    slider?.addEventListener("touchstart", dragStart);
+
+    document.addEventListener("mousemove", dragging);
+    slider?.addEventListener("touchmove", dragging);
+
+    document.addEventListener("mouseup", dragStop);
+    slider?.addEventListener("touchend", dragStop);
   }
 }
