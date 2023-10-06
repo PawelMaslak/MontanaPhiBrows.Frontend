@@ -1,8 +1,13 @@
 {
     "COMMON": {
-        "WELCOME_MESSAGE": "Siema kurwy",
         "SELECT_LANGUAGE": "Sprache wahlen",
         "LANGUAGE": "DE"
+    },
+    "WELCOME": {
+        "WELCOME_PART_ONE": "Einzigartige",
+        "APPROACH": "Ansatz",
+        "WELCOME_PART_TWO": "zum Microblading",
+        "SECOND_WELCOME": "Erstaunliche Schönheitserlebnisse, die auf Sie zugeschnitten sind!"
     },
     "CONTACT": {
         "HEADER": "KONTAKT & SOZIAL MEDIEN",
@@ -10,6 +15,6 @@
         "SOCIAL_MEDIA": "Sozial Median"
     },
     "FOOTER": {
-        "SIGNATURE": "Hergestellt in DDR ©"
+        "SIGNATURE": "Entwickelt und erstellt von PM Software ©"
     }
 }

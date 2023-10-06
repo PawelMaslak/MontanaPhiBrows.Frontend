@@ -4,6 +4,12 @@
         "SELECT_LANGUAGE": "Select language",
         "LANGUAGE": "EN"
     },
+    "WELCOME": {
+        "WELCOME_PART_ONE": "A unique",
+        "APPROACH": "approach",
+        "WELCOME_PART_TWO": "towards Microblading",
+        "SECOND_WELCOME": "Amazing beauty experience that's tailored to you!"
+    },
     "STORY": {
         "HEADER": "OUR STORY"
     },

@@ -51,6 +51,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     GalleryComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
