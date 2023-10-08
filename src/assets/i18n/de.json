@@ -1,4 +1,10 @@
 {
+    "NAVIGATION": {
+        "WELCOME": "Wilkommen",
+        "MY_STORY": "Mein Story",
+        "CONTACT": "Kontakt",
+        "SERVICES": "Service"
+    },
     "COMMON": {
         "SELECT_LANGUAGE": "Sprache wahlen",
         "LANGUAGE": "DE"
@@ -6,13 +12,21 @@
     "WELCOME": {
         "WELCOME_PART_ONE": "Einzigartige",
         "APPROACH": "Ansatz",
-        "WELCOME_PART_TWO": "zum Microblading",
+        "WELCOME_PART_TWO": "zum natürliche Schönheit",
         "SECOND_WELCOME": "Erstaunliche Schönheitserlebnisse, die auf Sie zugeschnitten sind!"
+    },
+    "STORY": {
+        "HEADER": "Mein Story"
     },
     "CONTACT": {
         "HEADER": "KONTAKT & SOZIAL MEDIEN",
         "TELEPHONE": "Telefon",
-        "SOCIAL_MEDIA": "Sozial Median"
+        "SOCIAL_MEDIA": "Sozial Medien",
+        "EMAIL": "Email"
+    },
+    "SERVICES": {
+        "HEADER": "MEINE ANGEBOT",
+        "SMALL_HEADER": "Pernament Make-up und Anti-Aging-Behandlungen"
     },
     "FOOTER": {
         "SIGNATURE": "Entwickelt und erstellt von PM Software ©"

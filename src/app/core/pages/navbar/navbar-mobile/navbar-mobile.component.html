@@ -20,16 +20,16 @@
         </div>
         <ul class="navbar-nav" [class.is-open]="isMenuOpen">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav1</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('welcome')">{{"NAVIGATION.WELCOME" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav2</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('story')">{{"NAVIGATION.MY_STORY" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav3</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('contact')">{{"NAVIGATION.CONTACT" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav4</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('services')">{{"NAVIGATION.SERVICES" | translate}}</a>
             </li>
         </ul>
     </div>
