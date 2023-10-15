@@ -30,7 +30,8 @@
     },
     "SERVICES": {
         "HEADER": "MY SERVICES",
-        "SMALL_HEADER": "Pernament make-up and anti aging treatments"
+        "SMALL_HEADER": "Pernament make-up and anti aging treatments",
+        "BOOK": "Book a visit"
     },
     "FOOTER": {
         "SIGNATURE": "Designed and built by PM Software ©"

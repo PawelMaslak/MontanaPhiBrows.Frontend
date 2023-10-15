@@ -26,7 +26,8 @@
     },
     "SERVICES": {
         "HEADER": "MEINE ANGEBOT",
-        "SMALL_HEADER": "Pernament Make-up und Anti-Aging-Behandlungen"
+        "SMALL_HEADER": "Pernament Make-up und Anti-Aging-Behandlungen",
+        "BOOK": "Book a visit"
     },
     "FOOTER": {
         "SIGNATURE": "Entwickelt und erstellt von PM Software ©"

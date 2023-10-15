@@ -5,12 +5,38 @@ $bg: $colourA;
 .services {
     background-color: $bg;
 
+    .header,
+    .price,
+    .description {
+        text-align: center;
+    }
+
+    .header {
+        font-size: 1.5rem;
+        font-family: $fontBold;
+        text-transform: uppercase;
+    }
+
+    .price {
+        display: flex;
+        font-size: 1.1rem;
+        justify-content: center;
+    }
+
+    .description {
+        font-size: .9rem;
+        text-align: justify;
+        margin: 5px;
+        height: 150px;
+    }
+
     .treatment {
         list-style-type: none;
-        border: 1px solid #eee;
+        border: 1.1px solid $colourB;
         margin: 0;
         padding: 0;
-        transition: 0.3s;
+        transition: 1s all ease;
+        min-height: 200px;
 
         .service-photo {
             height: 300px;
@@ -24,7 +50,13 @@ $bg: $colourA;
     }
 
     .treatment:hover {
-        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+        box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    @media only screen and (max-width: 992px) {
+        .description {
+            height: auto;
+        }
     }
 
     @media only screen and (max-width: 600px) {
@@ -32,4 +64,6 @@ $bg: $colourA;
             width: 100%;
         }
     }
+
+
 }
