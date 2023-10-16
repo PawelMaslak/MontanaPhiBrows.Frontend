@@ -16,7 +16,13 @@
         "SECOND_WELCOME": "Erstaunliche Schönheitserlebnisse, die auf Sie zugeschnitten sind!"
     },
     "STORY": {
-        "HEADER": "Mein Story"
+        "HEADER": "Mein Story",
+        "MESSAGE_1": "Hey Schöne,",
+        "MESSAGE_2": "Mein Name ist Monika und ich helfe Frauen, ihre natürliche Schönheit zu unterstreichen und sich jeden Tag in ihrer eigenen Haut schön zu fühlen.",
+        "MESSAGE_3": "Solange ich mich erinnern kann, habe ich mich für Make-up interessiert und mich gerne um mein Aussehen gekümmert. Der perfekte Eyeliner oder die perfekte Form meiner Augenbrauen haben mir immer viel Freude bereitet. Das morgendliche Schminken gehört immer noch zu meinen täglichen Lieblingsbeschäftigungen. Es ist auch ein Teil von mir, den ich mit anderen teilen möchte.",
+        "MESSAGE_4": "Kennst du das Gefühl, wenn du ein wirklich gutes Musikstück entdeckst und allen zeigen willst, wie toll es ist? Das hatte ich mit Microblading und deshalb gründete ich Montana PhiBrows.",
+        "MESSAGE_5": "Ja, ich bin ein kleines, wachsendes, selbständiges Unternehmen ohne Sekretärin, Manager oder persönliche Assistentin. Aber viele Kundinnen  haben mir vertraut und es ist mir gelungen, für jede die perfekte Augenbrauenform zu finden.",
+        "MESSAGE_6": "Ihr Besuch auf meiner Website ist der erste Schritt zur Verbesserung Ihres Selbstbewusstseins und ich freue mich, dass Sie dies zusammen mit mir machen wollen. Ein paar Stunden in meinem Büro werden Ihnen Zeitersparnis im Alltag, aber vor allem ein sofortiges und ein sofortiges, erfreuliches Ergebnis."
     },
     "CONTACT": {
         "HEADER": "KONTAKT & SOZIAL MEDIEN",
@@ -27,7 +33,10 @@
     "SERVICES": {
         "HEADER": "MEINE ANGEBOT",
         "SMALL_HEADER": "Pernament Make-up und Anti-Aging-Behandlungen",
-        "BOOK": "Book a visit"
+        "BOOK": "Book a visit",
+        "MICROBLADING": "PhiBrows Microblading ist ein kosmetisches Verfahren, bei dem mit einem speziellen Handgerät Pigmente unter die Haut eingebracht werden, um Ihnen gut definierte, natürlich aussehende Augenbrauen zu verleihen. In der Regel halten die Ergebnisse zwischen 18 und 30 Monaten, je nach Hauttyp, Lebensstil und Häufigkeit der Auffrischung.",
+        "MICRONEEDLING": "Der Plasma Pen ist eine innovative nicht-chirurgische, nicht-invasive Hautbehandlung. Plasma-Pen-Sitzungen (auch 'Fibroblasten' - Therapie genannt) reduzieren das Erscheinungsbild von Falten und verjüngen matte und schlaffe Haut, indem sie die Kollagenproduktion anregen.",
+        "PLASMA_PEN": "Microneedling ist ein kosmetisches Verfahren, bei dem winzige Nadeln in die Haut gestochen werden. Es wird zur Behandlung einer Vielzahl von Hautkrankheiten eingesetzt, die Vertiefungen in der Haut verursachen, wie z. B. Aknenarben, Operationsnarben, andere Narben, Verbrennungen, vergrößerte Poren, Falten und Dehnungsstreifen."
     },
     "FOOTER": {
         "SIGNATURE": "Entwickelt und erstellt von PM Software ©"
