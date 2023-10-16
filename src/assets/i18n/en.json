@@ -1,13 +1,46 @@
 {
+    "NAVIGATION": {
+        "WELCOME": "Welcome",
+        "MY_STORY": "My Story",
+        "CONTACT": "Contact",
+        "SERVICES": "Services"
+    },
     "COMMON": {
         "WELCOME_MESSAGE": "Hey you guys!",
         "SELECT_LANGUAGE": "Select language",
         "LANGUAGE": "EN"
     },
+    "WELCOME": {
+        "WELCOME_PART_ONE": "A unique",
+        "APPROACH": "approach",
+        "WELCOME_PART_TWO": "towards natural beauty",
+        "SECOND_WELCOME": "Amazing beauty experience that's tailored to you!"
+    },
+    "STORY": {
+        "HEADER": "My Story",
+        "MESSAGE_1": "Hey Beautiful",
+        "MESSAGE_2": "My name is Monika and I help people enhance their natural beauty and feel beautiful in their own skin every day.",
+        "MESSAGE_3": "For as long as I can remember I have been interested in makeup and have enjoyed taking care of my appearance. Creating the perfect eyeliner or the perfected shape of my eyebrows has always given me a lot of satisfaction. Applying make-up in the morning is still one of my favorite things to do every day. It's also a part of me that I wanted to share with others.",
+        "MESSAGE_4": "You know that feeling when you discover a really good piece of music and want to show everyone how great it is? I had that with Microblading and that's why I created Montana PhiBrows.",
+        "MESSAGE_5": "Yes, I'm a small, growing, self-sufficient business with no secretary, manager or personal assistant. But I have been trusted by many clients and have managed to find the perfect eyebrow shape for each of them.",
+        "MESSAGE_6": "Your visit to my website is the first step towards improving your self-confidence and I am glad that you want to do it together with me. A few hours in my office will allow you to save you time each day, but most importantly will give you an immediate, delightful result."
+    },
+    "REVIEWS": {
+        "HEADER": "What Our Clients Say"
+    },
     "CONTACT": {
         "HEADER": "CONTACT & MEDIA",
         "TELEPHONE": "Telephone",
-        "SOCIAL_MEDIA": "Social Media"
+        "SOCIAL_MEDIA": "Social Media",
+        "EMAIL": "Email"
+    },
+    "SERVICES": {
+        "HEADER": "MY SERVICES",
+        "SMALL_HEADER": "Pernament make-up and anti aging treatments",
+        "BOOK": "Book a visit",
+        "MICROBLADING": "PhiBrows Microblading is a cosmetic procedure that inserts pigment under your skin dedicated manual tool to give you well-defined, natural looking eyebrows. Generally, results can last from 18 to 30 months depending on your skin type, lifestyle, and how often you get touch-ups.",
+        "MICRONEEDLING": "The Plasma Pen is a groundbreaking non-surgical, non-invasive skin treatment. Plasma Pen sessions (also called “fibroblast” therapy) reduce the appearance of wrinkles and rejuvenate dull and sagging skin by stimulating collagen production.",
+        "PLASMA_PEN": "Microneedling is a cosmetic that uses tiny needles to puncture the skin. It is used to treat a variety of skin conditions that cause depressions in the skin such as acne scarring, surgical scars, other scars, burns, enlarged pores, wrinkles, and stretch marks."
     },
     "FOOTER": {
         "SIGNATURE": "Designed and built by PM Software ©"

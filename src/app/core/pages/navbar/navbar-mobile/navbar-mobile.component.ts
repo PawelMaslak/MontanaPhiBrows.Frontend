@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { LocalisationService } from 'src/app/core/services/localisation.service';
 import { LocaleLookupItem } from 'src/app/core/shared/lookup-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-mobile',
@@ -16,7 +16,8 @@ export class NavbarMobileComponent {
   public localStorage: Storage;
 
   constructor(
-    private readonly localisationService: LocalisationService
+    private readonly localisationService: LocalisationService,
+    private readonly router: Router
   ) {
     this.languages = this.localisationService.locales;
     this.selectedLanguage = this.localisationService.localeFullName;
@@ -40,5 +41,10 @@ export class NavbarMobileComponent {
   isMenuOpen = false;
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  navigate(component: string): void {
+    this.toggleMenu();
+    this.router.navigate(['/' + component]);
   }
 }

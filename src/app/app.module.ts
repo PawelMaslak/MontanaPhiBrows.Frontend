@@ -21,11 +21,15 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import {
   faInstagram,
   faGoogle,
+  faFacebook
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
-  faMap
+  faMap,
+  faArrowRight,
+  faArrowLeft
 } from '@fortawesome/free-solid-svg-icons';
+import { GalleryComponent } from './core/pages/gallery/gallery.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -43,9 +47,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ReviewsComponent,
     NavbarMobileComponent,
     NavbarDesktopComponent,
-    FooterComponent
+    FooterComponent,
+    GalleryComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FontAwesomeModule,
     AppRoutingModule,
@@ -66,7 +72,9 @@ export class AppModule {
     library.addIcons(
       faInstagram,
       faGoogle,
-      faMap
+      faFacebook,
+      faArrowRight,
+      faArrowLeft
     );
  }
 }

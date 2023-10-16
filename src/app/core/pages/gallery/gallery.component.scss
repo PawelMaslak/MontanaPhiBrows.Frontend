@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/global';
+
+.gallery {
+    background-color: $colourB;
+    padding: 2rem 0;
+
+    .slider {
+        white-space: nowrap;
+        overflow: hidden;
+        user-select: none;
+
+        img {
+            height: auto;
+            width: calc((100% / 3) - (4rem / 3));
+            margin-left: 2rem;
+            border-radius: 25px;
+        }
+
+        img:first-child {
+            margin-left: 0 !important;
+        }
+
+        @media (max-width: 991.98px) {
+            img {
+                width: calc((100% / 2) - 1rem);
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .slider-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $colourA;
+        opacity: 0.5;
+        transition: opacity 200ms;
+        cursor: pointer;
+    }
+
+    .slider-control:hover {
+        opacity: 1;
+    }
+
+    #prev-slide {
+        left: calc(.75rem - 20px);
+    }
+
+    #next-slide {
+        right: calc(.75rem - 20px);
+    }
+}

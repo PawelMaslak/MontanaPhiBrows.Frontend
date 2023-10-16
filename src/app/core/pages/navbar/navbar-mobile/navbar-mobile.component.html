@@ -1,8 +1,7 @@
-<nav class="navbar" #nav>
-    <div class="container">
+<nav class="navbar fixed-top d-block d-md-none">
+    <div class="container h-100">
         <a class="navbar-brand me-auto" href="#">
-            LOGO
-            <!-- wpierdolić tu logo -->
+            <img src="../../../../../assets/images/Montana Logo icon png file.png" alt="">
         </a>
         <div class="hamburger-menu" [class.is-open]="isMenuOpen" (click)="toggleMenu()">
             <span></span>
@@ -21,16 +20,16 @@
         </div>
         <ul class="navbar-nav" [class.is-open]="isMenuOpen">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav1</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('welcome')">{{"NAVIGATION.WELCOME" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav2</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('story')">{{"NAVIGATION.MY_STORY" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav3</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('contact')">{{"NAVIGATION.CONTACT" | translate}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Nav4</a>
+                <a class="nav-link" aria-current="page" (click)="navigate('services')">{{"NAVIGATION.SERVICES" | translate}}</a>
             </li>
         </ul>
     </div>

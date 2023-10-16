@@ -4,18 +4,36 @@ $bg: $colourA;
 
 .contact {
     background-color: $bg;
-    padding: 2rem 0;
 
     .logo,
     .photo {
-        width: 100%;
+        width: 80%;
     }
 
     .photo {
         border-radius: 5%;
     }
 
+    .icon {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
     .title {
-    text-align: right;
+        text-align: right;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fontColor;
+    }
+
+    .hero {
+        background-image: url(../../../../assets/images/contact/monica.png);
+        height: 60vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
     }
 }

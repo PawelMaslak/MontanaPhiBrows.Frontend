@@ -19,12 +19,10 @@ body {
 //     //min-height: 100vh;
 // }
 
-section.footer-section {
-    min-height: 10vh;
-
-    .container {
-        height: 100%;
-    }
+section {
+    padding-top: 5rem;
+    min-height: 90vh;
+    padding-bottom: 5vh;
 }
 
 section:nth-child(even) {
