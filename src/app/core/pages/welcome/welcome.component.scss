@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/global';
+
+.welcome {
+    background-color: $colourA;
+
+    .logo,
+    .photo {
+        width: 100%;
+    }
+
+    .text {
+        font-size: 1.35rem;
+    }
+
+    .photo {
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+}

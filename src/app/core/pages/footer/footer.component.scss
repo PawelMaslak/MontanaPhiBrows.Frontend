@@ -1,0 +1,23 @@
+@import "../../../../assets/styles/global.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: auto;
+    padding: 10px;
+}
+
+li {
+    display: inline;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColor;
+}

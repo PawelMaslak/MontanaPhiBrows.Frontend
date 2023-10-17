@@ -1,0 +1,35 @@
+@import '../../../../assets/styles/global';
+
+$bg: $colourA;
+
+.story {
+    background-color: $bg;
+    position: relative;
+
+    .photo {
+        width: 90%;
+        height: 90%;
+    }
+
+    .hero {
+        background-image: url(../../../../assets/images/story/monica.png);
+        height: 70vh;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .photo {
+            width: 90%;
+            height:80%;
+        }
+    }
+
+    @media only screen and (max-width: 900px) {
+        .photo {
+            width: 80%;
+        }
+    }
+}

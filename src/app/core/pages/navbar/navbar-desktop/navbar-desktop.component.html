@@ -1,0 +1,39 @@
+<nav class="navbar fixed-top d-none d-md-block">
+    <div class="container h-100">
+        <a class="navbar-brand" href="#">
+            <img src="../../../../../assets/images/Montana Logo icon png file.png" alt="">
+        </a>
+        <ul class="navbar-nav ms-auto h-100">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/welcome">
+                    {{"NAVIGATION.WELCOME" | translate}}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/story">
+                    {{"NAVIGATION.MY_STORY" | translate}}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/contact">
+                    {{"NAVIGATION.CONTACT" | translate}}
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" routerLink="/services">
+                    {{"NAVIGATION.SERVICES" | translate}}
+                </a>
+            </li>
+        </ul>
+        <div class="dropdown">
+            <div class="dropdown-toggle" id="dropdownLanguage" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ 'COMMON.LANGUAGE' | translate}}
+            </div>
+            <ul class="dropdown-menu" *ngFor="let language of availableLanguages" aria-labelledby="dropdownLanguage">
+                <li>
+                    <a class="dropdown-item" href="#" (click)="languageSelected(language.value)">{{language.value}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

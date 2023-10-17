@@ -1,0 +1,60 @@
+@import '../../../../../assets/styles/global';
+@import '../navbar.component.scss';
+
+$navHoverBg: $colourA;
+$navHoverLine: $colourB;
+$navBg: white;
+$navFont: black;
+
+.navbar {
+    .navbar-nav {
+        flex-direction: row;
+
+        // Navbar items
+        .nav-item {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 500ms;
+
+            .nav-link {
+                padding-inline: 2rem;
+                color: inherit;
+            }
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 110%;
+            background-color: $navHoverLine;
+            scale: 0 1;
+            transition:
+                scale 250ms,
+                translate 300ms;
+        }
+
+        .nav-item:hover:after {
+            scale: 1 1;
+        }
+
+        .nav-item:hover+.nav-item::after {
+            translate: -100%;
+            transition-delay: 250ms;
+        }
+
+        .nav-item:has(+ :hover)::after {
+            translate: 100%;
+            transition-delay: 250ms;
+        }
+
+        .nav-item:hover {
+            background-color: $navHoverBg;
+        }
+    }
+}

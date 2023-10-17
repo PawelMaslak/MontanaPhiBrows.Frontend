@@ -1,0 +1,134 @@
+{
+    "root": true,
+    "ignorePatterns": [
+      "dist",
+      "src/app/api/**",
+      "src/types/**",
+      "src/main.ts",
+      "src/app/pages/overview/job-data.service.ts"
+    ],
+    "overrides": [
+      {
+        "files": ["*.ts"],
+        "parserOptions": {
+          "project": ["tsconfig.app.json"],
+          "createDefaultProgram": true
+        },
+        "extends": [
+          "plugin:@angular-eslint/recommended",
+          "eslint:recommended",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:@typescript-eslint/recommended-requiring-type-checking",
+          "plugin:prettier/recommended"
+        ],
+        "plugins": ["eslint-plugin-unicorn","header", "sort-class-members"],
+        "rules": {
+          "@typescript-eslint/no-inferrable-types": "off",
+          "@typescript-eslint/no-unsafe-argument": "off",
+          "@typescript-eslint/no-unsafe-assignment": "off",
+          "@typescript-eslint/no-unsafe-call": "off",
+          "@typescript-eslint/no-unsafe-member-access": "off",
+          "@typescript-eslint/restrict-template-expressions": "off",
+          "@typescript-eslint/ban-types": "warn",
+          "@typescript-eslint/explicit-function-return-type": "warn",
+          "@typescript-eslint/no-floating-promises": "warn",
+          "@typescript-eslint/no-unsafe-return": "warn",
+          "@typescript-eslint/no-empty-function": ["error", { "allow": ["arrowFunctions"] }],
+          "unicorn/filename-case": "error",
+          "header/header": [2, "block", ["!"," Copyright (c) 2023 by Bystronic Laser AG, CH-3362 Niederönz",""], 1],
+          "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+          "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+          "sort-class-members/sort-class-members": [
+            2,
+            {
+              "order": [
+                "[static-properties]",
+                "[static-methods]",
+                "[conventional-private-properties]",
+                "[properties]",
+                "constructor",
+                "[methods]",
+                "[conventional-private-methods]"
+              ],
+              "accessorPairPositioning": "getThenSet",
+              "groups":{
+                "methods": [
+                  {
+                    "type": "method",
+                    "accessibility": "public",
+                    "sort": "alphabetical"
+                  },
+                  {
+                    "type": "method",
+                    "accessibility": "protected",
+                    "sort": "alphabetical"
+                  },
+                  {
+                    "type": "method",
+                    "accessibility": "private",
+                    "sort": "alphabetical"
+                  }
+                ],
+                "properties": [
+                  {
+                    "type":"property",
+                    "accessibility": "public",
+                    "sort": "alphabetical",
+                    "groupByDecorator": "Input"
+                  },
+                  {
+                    "type":"property",
+                    "accessibility": "public",
+                    "sort": "alphabetical",
+                    "groupByDecorator": "Output"
+                  },
+                  {
+                    "type":"property",
+                    "accessibility": "public",
+                    "sort": "alphabetical",
+                    "groupByDecorator": "ViewChild"
+                  },
+                  {
+                    "type":"property",
+                    "accessibility": "public",
+                    "sort": "alphabetical"
+                  },
+                  {
+                    "type":"property",
+                    "accessibility": "private",
+                    "sort": "alphabetical"
+                  }
+                ]      
+              }
+            }
+          ]
+        }
+      },
+      {
+        "files": ["*.spec.ts"],
+        "parserOptions": {
+          "project": ["tsconfig.spec.json"]
+        },
+        "extends": [
+          "plugin:eslint-plugin-jest/recommended"
+        ],
+        "rules": {
+          "@typescript-eslint/no-unsafe-return": "off",
+          "@typescript-eslint/unbound-method": "off",
+          "jest/no-conditional-expect": "warn",
+          "@typescript-eslint/no-explicit-any": "off"
+        }
+      },
+      {
+        "files": ["*.html"],
+        "extends": [
+          "plugin:@angular-eslint/template/recommended",
+          "plugin:prettier/recommended"
+        ],
+        "rules": {
+          "prettier/prettier": ["error", {"parser": "html"}]
+        }
+      }
+    ]
+  }
+  
